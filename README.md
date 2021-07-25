@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+<!-- Library can set up cho tracking app -->
+#npm i --save axios, highcharts, highcharts-react-official, lodash, moment, @highcharts/map-collection, @material-ui/core, @fontsource/roboto
+<!-- Kien thuc base -->
+...Cách tạo react app...
+sudo npm install -g create-react-app
+create-react-app ten_app --template typescript (Neu viet theo ts)
+create-react app ten_app (Neu viet theo js)
+...Kiến thức JavaScript...
+/Var: Biến var sẽ có scope là globally scoped. Đặc biệt, biến var còn có thêm tính chất hoisting: nghĩa là dù khai báo ở đâu thì biến đều sẽ được đem lên đầu scope trước khi code được thực hiện.
+/Let: Biến let được khai báo sẽ có scope là block scoped chứ không phải globally hay locally scoped.
+/Const: * Trong biến const nếu trường hợp kiểu của biến là primitive (bao gồm string, number, boolean, null, và undefined) thì chúng ta sẽ không thể tái khai báo hay cập nhật giá trị mới để thay thế cho giá trị trước đó của biến.
+    const greeting = "say Hi";
+    greeting = "say Hello instead"; // error : Assignment to constant variable. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    ------------------------------------------------
 
-## Available Scripts
+    const greeting = "say Hi";
+    const greeting = "say Hello instead"; // error : Identifier 'greeting' has already been declared
+    * Đối với trường hợp kiểu biến là reference (bao gồm object, array, và function) thì tuy không thể tái khai báo hay cập nhật giá trị của biến nhưng chúng ta vẫn có thể cập nhật giá trị cho thuộc tính của biến đó.
+        const greeting = {
+        message : "Hello",
+        number : "five"
+    }
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    greeting.message = "say Hello instead";
+    console.log(greeting); // {message:"say Hello instead",number:"five"}
+* - Trong JavaScript, các kiểu dữ liệu được chia thành những loại cơ bản như sau:
++ string
++ number
++ boolean
++ object
++ undefined
++ array (đây là một trường hợp đặc biệt của kiểu dữ liệu object)
+/Toán tử 3 ngồi: Cần tìm hiểu
