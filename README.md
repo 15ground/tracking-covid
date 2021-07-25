@@ -1,6 +1,6 @@
-<!-- Library can set up cho tracking app -->
+//Library can set up cho tracking app
 #npm i --save axios, highcharts, highcharts-react-official, lodash, moment, @highcharts/map-collection, @material-ui/core, @fontsource/roboto
-<!-- Kien thuc base -->
+//Kien thuc base
 ...Cách tạo react app...
 sudo npm install -g create-react-app
 create-react-app ten_app --template typescript (Neu viet theo ts)
